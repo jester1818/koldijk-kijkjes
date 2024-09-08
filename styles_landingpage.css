@@ -181,7 +181,6 @@ nav li {
     position: relative;
     padding-bottom: -300vh;
     transition: background-color 0.5s ease;
-    border: solid 3px pink;
     margin-bottom: -60vh;
 }
 
@@ -347,7 +346,6 @@ nav li {
     height: 50vh;
     width: 100%;
     background-color: #2C2C2C;
-    border: solid 3px purple;
     color: white;
     flex-direction: column;
     align-items: center;
@@ -489,7 +487,6 @@ nav li {
         flex-direction: column;
         height: fit-content;
         margin: 20vh 0;
-        border: solid 2px blue;
         text-align: center;
     }
 }
