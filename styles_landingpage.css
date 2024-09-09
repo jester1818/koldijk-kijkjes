@@ -16,11 +16,13 @@ body {
     background-color: white;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure the width doesn't change when locking the scroll */
 }
 
 
 h1 {
-    font-size: clamp(2rem, 4vw, 3rem); /* Heading adjusts with the viewport */
+    font-size: clamp(3rem, 5vw, 4rem); /* Heading adjusts with the viewport */
 }
 
 
@@ -54,6 +56,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     z-index: 2;
+    transition: opacity 1s ease;
   }
 
 /*
@@ -90,6 +93,53 @@ nav li {
 .nav-link:hover {
     font-weight: bold;
     cursor: pointer;
+}
+
+/* Circle Menu */
+.circle-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #2C2C2C;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: width 0.9s ease, height 0.9s ease;
+    overflow: hidden;
+    pointer-events: none; /* Disable pointer events when menu is closed */
+}
+
+/* Menu Content (Links inside the circle) */
+.menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-content a {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-decoration: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Active state - expanding circle */
+.menu-open .circle-menu {
+    width: 200vw; /* Expands to cover the whole screen */
+    height: 200vw;
+    pointer-events: auto; /* Enable pointer events when the menu is open */
+}
+
+.menu-open .menu-content {
+    opacity: 1; /* Shows the links */
 }
 
 /* Hero styling*/ 
@@ -184,6 +234,12 @@ nav li {
     margin-bottom: -60vh;
 }
 
+@media (max-width: 676px) {
+    .home-gallery {
+        margin-bottom: -100vh;
+    }
+}
+
 .gallery-kijkje {
     display: flex; /* Make the container a flexbox */
     align-items: center; /* Align items vertically centered */
@@ -201,9 +257,9 @@ nav li {
     opacity: 1; /* When the 'visible' class is added, the image fades in */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 676px) {
     .gallery-kijkje {
-        margin-top: 15vh;
+        margin-top: 22vh;
     }
 }
 
@@ -353,10 +409,6 @@ nav li {
     text-align: center;
 }
 
-.newsletter h1 {
-    font-size: calc(1.5rem + 2vw);
-}
-
 .newsletter p {
     font-size: calc(1rem + 0.7vw);
     padding-top: 7vh;
@@ -364,7 +416,7 @@ nav li {
 }
 
 .container-subscription {
-    width: 40%
+    width: 45%
 }
 
 @media (max-width: 767px) {
@@ -449,8 +501,6 @@ nav li {
     width: 60%;
 }
 
-
-
 /* about styling */
 
 .about-container {
@@ -482,6 +532,8 @@ nav li {
     gap: 10px;
 }
 
+
+
 @media (max-width:676px) {
     .about-container {
         flex-direction: column;
@@ -491,20 +543,24 @@ nav li {
     }
 }
 
+@media (max-width:676px) {
+    .about-image {
+        max-height: 30vh;
+    }
+}
+
 /* Footer styling */
 
 .site-footer {
     background-color: #2C2C2C;
     color: white;
     padding: 2rem 0;
-    font-family: "Montserrat Alternates", sans-serif;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }

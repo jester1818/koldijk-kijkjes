@@ -73,5 +73,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Toggle circle Menu
+    const menuButton = document.getElementById('nav-menu');
+    const closeButton = document.getElementById('close-menu');
+    const circleMenu = document.getElementById('circle-menu');
+
+    // Function to toggle the menu
+    function toggleMenu() {
+        document.body.classList.toggle('menu-open');
+    }
+
+    // Open or close the menu when clicking the menu button
+    menuButton.addEventListener('click', function() {
+        toggleMenu();
+    });
+
+    // Close the menu when clicking the close button
+    closeButton.addEventListener('click', function(){
+        toggleMenu();
+    });
+
+
+
+    // Alert will come online later
+    // Select all menu links
+    const notOnline = document.querySelectorAll('.not-online-yet');
+
+
+    // Add click event listener to each link
+    notOnline.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            alert("This link does not work yet - will come online later!");
+        });
+    });
 
 });
+
+    
+
+
+
+
