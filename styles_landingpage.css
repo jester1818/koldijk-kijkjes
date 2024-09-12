@@ -20,6 +20,10 @@ body {
     width: 100%; /* Ensure the width doesn't change when locking the scroll */
 }
 
+body p {
+    font-size: calc(1rem + 0.7vw);
+}
+
 
 h1 {
     font-size: clamp(3rem, 5vw, 4rem); /* Heading adjusts with the viewport */
@@ -95,7 +99,10 @@ nav li {
     cursor: pointer;
 }
 
-/* Circle Menu */
+
+
+
+/* Circle Menu */  
 .circle-menu {
     position: fixed;
     top: 50%;
@@ -141,6 +148,7 @@ nav li {
 .menu-open .menu-content {
     opacity: 1; /* Shows the links */
 }
+
 
 /* Hero styling*/ 
 
@@ -234,27 +242,17 @@ nav li {
     margin-bottom: -60vh;
 }
 
-@media (max-width: 676px) {
-    .home-gallery {
-        margin-bottom: -100vh;
-    }
-}
-
 .gallery-kijkje {
     display: flex; /* Make the container a flexbox */
     align-items: center; /* Align items vertically centered */
-    width: 30vw; /* Let the width adjust based on content */
     height: auto; /* Adjust height to fit content */
     gap: 1vw; /* Space between the image and the text */
     position: relative;
     margin-top: 10vh;
     text-align: center;
-    opacity: 0; /* Start with the image hidden */
-    transition: opacity 1.5s ease-in-out; /* Define the fade-in and fade-out effect */
-}
-
-.gallery-kijkje.visible {
-    opacity: 1; /* When the 'visible' class is added, the image fades in */
+    opacity: 0.3; /* Start with the image hidden */
+    transform: scale(1); /* Initial scale for images */
+    transition: opacity 0.1s ease, transform 0.1s ease; /* Smooth transitions for opacity and scale */
 }
 
 @media (max-width: 676px) {
@@ -271,19 +269,21 @@ nav li {
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-kijkje::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 110%;
-    height: 120%;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px); /* Adjust blur level */
-    opacity: 0.12; /* Make it semi-transparent */
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Position it behind the content */
+@media (min-width: 677px) {
+    .gallery-kijkje::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        width: 110%;
+        height: 120%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px); /* Adjust blur level */
+        opacity: 0.12; /* Make it semi-transparent */
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Position it behind the content */
+    }
 }
 
 .gallery-kijkje:nth-child(1) {
@@ -292,7 +292,14 @@ nav li {
 }
 
 .gallery-kijkje:nth-child(1)::before {
-    background-image: url(https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Spring-2.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(1) {
+        width: 80vw;
+        left: -5vw;
+    }
 }
 
 
@@ -303,52 +310,91 @@ nav li {
 }
 
 .gallery-kijkje:nth-child(2)::before {
-    background-image: url(https://images.unsplash.com/photo-1424384309529-4f05c2349657?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Spring-5.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(2) {
+        width: 90vw;
+        left: 5vw;
+        top: -10vh;
+    }
 }
 
 .gallery-kijkje:nth-child(3) {
-    width: 30vw;
+    width: 40vw;
     flex-direction: row-reverse;
     left: -5vw;
-    top: -40vh;
+    top: -35vh;
 }
 
 .gallery-kijkje:nth-child(3)::before {
-    background-image: url(https://images.unsplash.com/photo-1553755322-56baa43a31d7?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Spring-3.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(3) {
+        width: 85vw;
+        left: 5vw;
+        top: -5vh;
+    }
 }
 
 
 .gallery-kijkje:nth-child(4) {
-    width: 30vw;
+    width: 45vw;
     flex-direction: row-reverse;
-    left: 30vw;
-    top: -45vh;
+    left: 25vw;
+    top: -35vh;
 }
 
 .gallery-kijkje:nth-child(4)::before {
-    background-image: url(https://plus.unsplash.com/premium_photo-1711174678635-ebfc6045ea25?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Autumn-3.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(4) {
+        width: 80vw;
+        left: 5vw;
+        top: -5vh;
+    }
 }
 
 .gallery-kijkje:nth-child(5) {
     width: 50vw;
     left: -15vw;
-    top: -55vh;
+    top: -45vh;
 }
 
 .gallery-kijkje:nth-child(5)::before {
-    background-image: url(https://images.unsplash.com/photo-1516130626860-4cb86c4448da?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Spring-4.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(5) {
+        width: 70vw;
+        left: 5vw;
+        top: -5vh;
+    }
 }
 
 .gallery-kijkje:nth-child(6) {
     width: 40vw;
     left: -25vw;
-    top: -60vh;
+    top: -50vh;
 }
 
 .gallery-kijkje:nth-child(6)::before {
-    background-image: url(https://images.unsplash.com/photo-1514509353532-1419c0935d72?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url();
 }
 
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(6) {
+        width: 60vw;
+        left: -15vw;
+        top: -5vh;
+    }
+}
 
 .gallery-kijkje:nth-child(7) {
     width: 50vw;
@@ -358,48 +404,84 @@ nav li {
 }
 
 .gallery-kijkje:nth-child(7)::before {
-    background-image: url(https://images.unsplash.com/photo-1700513742007-3308baa7b34c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Autumn-4.JPG);
 }
 
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(7) {
+        width: 65vw;
+        left: 15vw;
+        top: -5vh;
+    }
+}
 
 .gallery-kijkje:nth-child(8) {
-    width: 35vw;
+    width: 65vw;
     left: 0vw;
     top: -85vh;
 }
 
 .gallery-kijkje:nth-child(8)::before {
-    background-image: url(https://images.unsplash.com/photo-1662226572816-45762acddd81?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Winter-1.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(8) {
+        width: 80vw;
+        left: 5vw;
+        top: -5vh;
+    }
 }
 
 
 .gallery-kijkje:nth-child(9) {
-    width: 35vw;
-    left: -30vw;
-    top: -100vh;
+    width: 40vw;
+    left: -20vw;
+    top: -85vh;
 }
 
 .gallery-kijkje:nth-child(9)::before {
-    background-image: url(https://images.unsplash.com/photo-1644692385307-e3ede952178c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Winter-2.JPG);
 }
 
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(9) {
+        width: 70vw;
+        left: -5vw;
+        top: -5vh;
+    }
+}
 
 .gallery-kijkje:nth-child(10) {
-    width: 40vw;
-    left: 25vw;
-    top: -110vh;
+    width: 65vw;
+    left: 10vw;
+    top: -80vh;
     flex-direction: row-reverse;
 }
 
 .gallery-kijkje:nth-child(10)::before {
-    background-image: url(https://images.unsplash.com/photo-1701752656381-7f9dcf3c36a2?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/Winter-3.JPG);
+}
+
+@media (max-width: 676px) {
+    .gallery-kijkje:nth-child(10) {
+        width: 93vw;
+        left: 0vw;
+        top: -2vh;
+    }
+}
+
+@media (max-width: 676px) {
+    .home-gallery {
+        margin-bottom: 30vh;
+    }
 }
 
 
 /* Newsletter styling */
 .newsletter {
     display: flex;
-    height: 50vh;
+    height: 55vh;
     width: 100%;
     background-color: #2C2C2C;
     color: white;
@@ -407,10 +489,17 @@ nav li {
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 676px) {
+    .newsletter {
+        height: 70vh;
+    }
 }
 
 .newsletter p {
-    font-size: calc(1rem + 0.7vw);
     padding-top: 7vh;
     padding-bottom: 2vh;
 }
@@ -435,8 +524,8 @@ nav li {
 
 #newsletter-email, #email-submit {
     height: 4vh;
-    background-color: #2C2C2C;
     color: white; 
+    background-color: #2C2C2C;
     border-radius: 6px;
     border: none;
     font-family: "Montserrat Alternates", sans-serif;
@@ -459,9 +548,7 @@ nav li {
 }
 
 #email-submit:hover {
-    color: white; /* Ensures the text remains visible */
-    font-weight: 600; 
-    cursor: pointer; /* Shows pointer on hover */
+    font-weight: 500;
 }
 
 .line-subscription {
@@ -516,6 +603,10 @@ nav li {
     gap: 30px;
 }
 
+.about-container h1 {
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem); /* Heading adjusts with the viewport */
+}
+
 .about-image {
     max-height: 60vh;
     object-fit: cover;
@@ -524,6 +615,7 @@ nav li {
 
 .about-image:hover {
     transform: scale(1.05);
+    src: url(images/pap-2.jpg)
 }
 
 .about-text {
@@ -531,7 +623,6 @@ nav li {
     flex-direction: column;
     gap: 10px;
 }
-
 
 
 @media (max-width:676px) {
@@ -545,7 +636,7 @@ nav li {
 
 @media (max-width:676px) {
     .about-image {
-        max-height: 30vh;
+        max-height: 50vh;
     }
 }
 
@@ -554,19 +645,20 @@ nav li {
 .site-footer {
     background-color: #2C2C2C;
     color: white;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    text-align: center;
     margin: 0 auto;
     padding: 1rem;
 }
 
 .footer-column {
-    flex: 1 1 30%;
+    width: 30%;
     margin: 1rem;
 }
 
@@ -599,8 +691,11 @@ nav li {
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid #555;
-    font-size: 0.9rem;
     color: #999;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
 }
 
 /* Social Media Links Styling */
