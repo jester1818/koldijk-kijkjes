@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-
-
-
-
-
     //Menu dark/light effect
     document.addEventListener('scroll', function() {
         const navbar = document.getElementById('nav-bar');
@@ -43,57 +38,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('nav-menu');
     const closeButton = document.getElementById('close-menu');
     const circleMenu = document.getElementById('circle-menu');
+    const menuLinks = document.querySelectorAll('#circle-menu a'); // Select all links in the menu
 
     // Function to toggle the menu
     function toggleMenu() {
         document.body.classList.toggle('menu-open');
     }
 
-    // Open or close the menu when clicking the menu button
+    // Open the menu when clicking the menu button
     menuButton.addEventListener('click', function() {
-        toggleMenu();
+        document.body.classList.add('menu-open'); // Ensure the menu opens
     });
 
     // Close the menu when clicking the close button
-    closeButton.addEventListener('click', function(){
-        toggleMenu();
+    closeButton.addEventListener('click', function() {
+        document.body.classList.remove('menu-open'); // Ensure the menu closes
     });
 
-
-
-    // Alert will come online later
-    // Select all menu links
-    const notOnline = document.querySelectorAll('.not-online-yet');
-
-
-    // Add click event listener to each link
-    notOnline.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            alert("This link does not work yet - will come online later!");
+    // Close the menu after clicking any menu link and navigate to the section
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            document.body.classList.remove('menu-open'); // Close the menu
         });
     });
 
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
-const scrollSection = document.querySelector('.home-gallery');
-const testScroll = document.querySelectorAll('.test-scroll')
-
-if (scrollSection) {
-    
-    scrollSection.addEventListener('scroll', function() {
-        alert("You've just entered scroll section");
-        const scrollPosition = scrollSection.scrollTop;
-        const sectionHeight = scrollSection.scrollHeight - scrollSection.clientHeight
-        const scrollPercentage = scrollPosition / sectionHeight;
-    });
-}
-else {
-    console.error('Scroll section not found')
-}
 
 });
 

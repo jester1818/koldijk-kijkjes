@@ -252,7 +252,7 @@ nav li {
     text-align: center;
     opacity: 0.3; /* Start with the image hidden */
     transform: scale(1); /* Initial scale for images */
-    transition: opacity 0.1s ease, transform 0.1s ease; /* Smooth transitions for opacity and scale */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for opacity and scale */
 }
 
 @media (max-width: 676px) {
@@ -491,6 +491,7 @@ nav li {
     text-align: center;
     z-index: 1;
     position: relative;
+    padding: 0 10px;
 }
 
 @media (max-width: 676px) {
@@ -588,19 +589,18 @@ nav li {
     width: 60%;
 }
 
-/* about styling */
+/* About Tim Section */
 
 .about-container {
-    height: 70vh;
+    height: 100vh;
     max-width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    margin: 40px 0;
     display: flex;
-    margin-top: 20vh;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    position: relative;
 }
 
 .about-container h1 {
@@ -611,6 +611,40 @@ nav li {
     max-height: 60vh;
     object-fit: cover;
     transition: transform 0.5s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.about-image::before {
+    content: ""; /* Required for the pseudo-element to render */
+    background-color: #2c2c2c; /* The color of the background box */
+    position: absolute;
+    top: 10px; /* Adjust as needed for vertical offset */
+    left: 10px; /* Adjust as needed for horizontal offset */
+    width: 100%; /* Match the width of the image */
+    height: 100%; /* Match the height of the image */
+    z-index: 1; /* Place the background behind the image */
+}
+
+.decorative-stripes {
+    width: 30vw;
+    height: 4vh;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    position:absolute
+}
+
+.light-blue-stripe {
+    background-color: #bfe5ef;
+    left: 5vw;
+    bottom: 25vh;
+}
+
+.dark-blue-stripe {
+    background-color: #1848a0;
+    left: 13vw;
+    bottom: 83vh;
 }
 
 .about-image:hover {
@@ -629,16 +663,172 @@ nav li {
     .about-container {
         flex-direction: column;
         height: fit-content;
-        margin: 20vh 0;
+        margin: 10vh 0;
         text-align: center;
     }
 }
 
 @media (max-width:676px) {
     .about-image {
-        max-height: 50vh;
+        max-height: 40vh;
     }
 }
+
+
+/* Van Kijken naar Zien */
+
+.van-kijken-naar-zien {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    border-top:solid 1px #2C2C2C;
+    border-bottom:solid 1px #2C2C2C;
+}
+
+#book-text {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#book-photo {
+    display: flex;
+    background-color: #2c2c2c25; 
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#book-published{
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: brown;
+    margin-top: 20vh;
+}
+
+#book-title {
+    margin-bottom: 3vh;
+}
+
+#book-author{
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #2C2C2C;
+    margin-bottom:10vh;
+}
+
+
+#book-cover {
+    height: auto;
+    width: 70%;
+    overflow:hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#book-buy {
+    width: 40%;
+    height: 5%;
+    border-radius: 6px;
+}
+
+@media (max-width:676px) {
+    #van-kijken-naar-zien {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+
+@media (max-width:676px) {
+    #book-text {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:676px) {
+    #book-published {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width:676px) {
+    #book-photo {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+
+
+/* Photo services */
+    
+.photo-services {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: auto;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-services-container {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 0px 5px;
+    padding-top: 30px;
+    border: 1px solid #2c2c2c;
+    border-radius: 8px;
+}
+
+.photo-services-container-photo {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+@media (max-width:676px) {
+    .photo-services {
+        flex-direction: column;
+        height: fit-content;
+        gap:10px;
+    }
+}
+
+@media (max-width:676px) {
+    .photo-services-container {
+        width: 80%;
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+}
+
+
+/* Contact styling */
+
+.contact {
+    height:50vh;
+    width:100vw;
+    background-color: #2c2c2c75;
+}
+
+
+
 
 /* Footer styling */
 

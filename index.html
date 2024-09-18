@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles_landingpage.css">
-    <title>Koldijk's Kijkjes</title>
+    <title>Koldijk's Kijk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -33,10 +33,11 @@
         <!-- Expanding Circle Menu -->
         <div id="circle-menu" class="circle-menu">
             <div class="menu-content">
-                <a href="#" class="animated-underline not-online-yet">Home</a>
-                <a href="#" class="animated-underline not-online-yet">Over ons</a>
-                <a href="#" class="animated-underline not-online-yet">Services</a>
-                <a href="#" class="animated-underline not-online-yet">Contact</a>
+                <a href="#home" class="animated-underline not-online-yet">Home</a>
+                <a href="#over-tim" class="animated-underline not-online-yet">Over Tim</a>
+                <a href="#van-kijken-naar-zien" class="animated-underline not-online-yet">Van Kijken naar Zien</a>
+                <a href="#photo-services" class="animated-underline not-online-yet">Foto services</a>
+                <a href="#contact" class="animated-underline not-online-yet">Contact</a>
                 <a href="#" id="close-menu" class="close-btn animated-underline italic">Sluit menu</a> <!-- Close the circle menu -->
             </div>
         </div>
@@ -45,10 +46,10 @@
 
     <div class="container">
 
-        <div class="section hero dark-background with-overlay">
+        <div class="section hero dark-background with-overlay" id="home">
             <img src="images/Autumn-2.JPG" alt="Forest Image with Sun">
                 <div id="hero-text">
-                <h1>Koldijk's Kijkjes</h1>
+                <h1>Koldijk's Kijk</h1>
                 <h3>Natuurfotografie en bewustwording</h3>
                 <p>Verken alle <a href="" id="hero-link" class="italic animated-underline not-online-yet">kijkjes</a></p>
                 </div>
@@ -124,14 +125,55 @@
             </div>
         </div>
 
-        <div class="about-container" class="section light-background">
-            <img class="about-image" src="images/Tim-pic.jpg" alt="Picture Tim">
+        <div class="about-container section light-background" id="over-tim">
+                <div ><img class="about-image" src="images/Tim-pic.jpg" alt="Picture Tim"></div>
+                    <div class="light-blue-stripe decorative-stripes"></div>
+                    <div class="dark-blue-stripe decorative-stripes"></div>
             <div class="about-text">
+                <p id="about-top-header">OVER TIM</p>
                 <h1 id="about-header">Vastleggen van natuurlijke schoonheid in stilte</h1>
                 <p id="about-paragraph">Tim Koldijk is een natuurfotograaf en persoonlijke coach die de schoonheid van de natuur vastlegt, terwijl hij individuen begeleidt op hun reis naar zelfontdekking. Zijn werk verenigt kunst en doel, en nodigt uit tot een diepere verbinding met de natuur en jezelf.</p>
             </div>
+        </div>>
+
+
+        <div class="van-kijken-naar-zien section light-background" id="van-kijken-naar-zien">
+         <div id="book-text">
+            <p id="book-published">Uitgegeven op 16 December, 2018</p>
+            <h1 id="book-title">Van Kijken naar Zien</h1>
+            <p id="book-author">Geschreven door Tim Koldijk</p>
+            <p id="book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur explicabo fugit necessitatibus dicta, quod hic minima vel tempore ab, reprehenderit beatae deleniti. Ullam repellendus, nulla nihil accusantium eius harum!</p>
+         </div>
+         <div id="book-photo">
+            <img id="book-cover" src="images/bookcover.png" alt="Van-kijken-naar-zien cover picture">
+            <button id="book-buy">Dit wil ik!</button>
+         </div>
         </div>
 
+
+        <div class="photo-services section light-background" id="photo-services">
+            <div class="photo-services-container" id="order-photos">
+                <h1 class="photo-services-container-header">Bestel foto's</h1>
+                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
+                <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore a consectetur, ab et cumque, nemo veritatis culpa enim aliquam vel quia eos blanditiis placeat optio consequuntur dignissimos non? Repudiandae, nihil.</p>
+            </div>
+
+            <div class="photo-services-container" id="workshop">
+                <h1 class="photo-services-container-header">Workshops</h1>
+                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
+                <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima velit rerum ad eligendi tenetur sed debitis nostrum, ipsam reiciendis. Ducimus inventore vero ex quam adipisci blanditiis, nesciunt vel perferendis laudantium!</p>
+            </div>
+
+            <div class="photo-services-container" id="photography">
+                <h1 class="photo-services-container-header">Evenementen</h1>
+                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
+                <p class="photo-services-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quae non ipsum optio illum! Possimus et magnam laborum provident officia minus id similique deserunt voluptas, expedita vel obcaecati tenetur totam!</p>
+            </div>
+        </div>
+
+        <div class="section contact" id="contact">
+
+        </div>
 
 
     </div>
