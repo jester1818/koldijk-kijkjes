@@ -8,108 +8,82 @@
     <title>Koldijk's Kijk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div id="page-wrapper">
+
         <header id="header">
             <div id="logo">
                 <!--img src=""-->
                 <div id="logo-pic"></div>
             </div>
             
-            <nav id="nav-bar">
-                <ul>
-                    <!-- Existing Menu Item -->
-                    <li class="nav-link" id="nav-menu">Menu</li>
-                </ul>
-            </nav>
+            <div id="nav-bar">
+                <p class="nav-link" id="nav-menu">Menu</p>
+            </div>
         </header>
 
         <!-- Expanding Circle Menu -->
-        <div id="circle-menu" class="circle-menu">
+        <menu id="circle-menu" class="circle-menu">
             <div class="menu-content">
-                <a href="#home" class="animated-underline not-online-yet">Home</a>
-                <a href="#over-tim" class="animated-underline not-online-yet">Over Tim</a>
-                <a href="#van-kijken-naar-zien" class="animated-underline not-online-yet">Van Kijken naar Zien</a>
-                <a href="#photo-services" class="animated-underline not-online-yet">Foto services</a>
-                <a href="#contact" class="animated-underline not-online-yet">Contact</a>
-                <a href="#" id="close-menu" class="close-btn animated-underline italic">Sluit menu</a> <!-- Close the circle menu -->
+                <a href="#home" class="">Home</a>
+                <a href="#galerij" class="">Galerij</a>
+                <a href="#over-tim" class="">Over Tim</a>
+                <a href="#van-kijken-naar-zien" class="">Van Kijken naar Zien</a>
+                <a href="#photo-services" class="">Foto services</a>
+                <a href="#contact" class="">Contact</a>
+                <a href="#" id="close-menu" class="close-btn italic">Sluit menu</a> 
             </div>
-        </div>
-            
-    </div>
-
-    <div class="container">
-
-        <div class="section hero dark-background with-overlay" id="home">
+        </menu>  
+ 
+        <section class="hero dark-background with-overlay scroll-snap" id="home">
             <img src="images/Autumn-2.JPG" alt="Forest Image with Sun">
-                <div id="hero-text">
+                <div class="hero-text">
                 <h1>Koldijk's Kijk</h1>
                 <h3>Natuurfotografie en bewustwording</h3>
-                <p>Verken alle <a href="" id="hero-link" class="italic animated-underline not-online-yet">kijkjes</a></p>
+                <p>Verken alle <a href="#galerij" id="hero-link" class="italic animated-underline not-online-yet">kijkjes</a></p>
                 </div>
-        </div>
+        </section>
 
-        <div class="home-gallery section light-background">
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Spring-2.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-    
-            </div>
-             
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Spring-5.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(2) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
-            
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Spring-3.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(3) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+        <section class="photo-gallery light-background scroll-snap" id="galerij">
+                <div class="photo-gallery-item gallery-picture photo-gallery-item-1">
+                    <img src="" alt="" class="gallery-picture-img">
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Autumn-3.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(4) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+                <div class="photo-gallery-item gallery-picture photo-gallery-item-2">
+                    <img src="" alt="" class="gallery-picture-img">
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Spring-4.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(5) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>        
+                <div class="photo-gallery-item gallery-picture photo-gallery-item-3">
+                    <img src="" alt="" class="gallery-picture-img">
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Autumn-1.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(6) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+                <div class="photo-gallery-item gallery-picture photo-gallery-item-4">
+                    <img src="" alt="" class="gallery-picture-img">
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Autumn-4.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(7) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+                <div class="photo-gallery-item gallery-textbox photo-gallery-item-5">
+                    <div class="gallery-textbox">
+                    <h1 class="gallery-textbox-header">Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+                    <p class="gallery-textbox-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur explicabo fugit necessitatibus dicta, quod hic minima vel tempore ab, reprehenderit beatae deleniti. Ullam repellendus, nulla nihil accusantium eius harum!</p>
+                    </div>
+                    <div class="gallery-textbox">
+                    <p class="gallery-textbox-date">19 September, 2024</p>
+                    </div>
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Winter-1.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(8) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+                <!-- Navigation Buttons -->
+                <div class="gallery-navigation">
+                    <button id="prev-button" class="button button--secondary">Previous</button>
+                    <button id="next-button" class="button button--secondary">Next</button>
+                </div>
 
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Winter-2.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(9) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
-            
-            <div class="gallery-kijkje fade-content">
-                <img src="images/Winter-3.JPG" class="kijkje-img" alt="Forest Image">
-                <div class="kijkje-text"><h4>(10) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores veniam, aperiam maxime earum excepturi.</h4></div>
-            </div>
+        </section>
 
-        </div>
 
-        <div class="section newsletter dark-background">
+        <!-- <div class="section newsletter dark-background">
             <h1>Wil je dit vaker zien?</h1>
             <p>Ontvang elke week een nieuw kijkje door je te abonneren</p>
             <div class="container-subscription">
@@ -123,21 +97,22 @@
                 <div class="social-icon"><img src="images/instagram.png" alt="instagram"></div>
                 <div class="social-icon"><img src="images/facebook-app-symbol.png" alt="facebook"></div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="about-container section light-background" id="over-tim">
-                <div ><img class="about-image" src="images/Tim-pic.jpg" alt="Picture Tim"></div>
+        <section class="about-container section light-background scroll-snap" id="over-tim">
+                <div ><img class="about-image shadow-pop-br" src="images/Tim-pic.jpg" alt="Picture Tim"></div>
                     <div class="light-blue-stripe decorative-stripes"></div>
                     <div class="dark-blue-stripe decorative-stripes"></div>
             <div class="about-text">
                 <p id="about-top-header">OVER TIM</p>
                 <h1 id="about-header">Vastleggen van natuurlijke schoonheid in stilte</h1>
                 <p id="about-paragraph">Tim Koldijk is een natuurfotograaf en persoonlijke coach die de schoonheid van de natuur vastlegt, terwijl hij individuen begeleidt op hun reis naar zelfontdekking. Zijn werk verenigt kunst en doel, en nodigt uit tot een diepere verbinding met de natuur en jezelf.</p>
+                <a class="button button--primary" href="mailto:timkoldijk@me.com?subject=Hello%20Tim&body=I%20wanted%20to%20reach%20out.">Kom in contact</a>
             </div>
-        </div>>
+        </section>
 
 
-        <div class="van-kijken-naar-zien section light-background" id="van-kijken-naar-zien">
+        <section class="van-kijken-naar-zien section light-background scroll-snap" id="van-kijken-naar-zien">
          <div id="book-text">
             <p id="book-published">Uitgegeven op 16 December, 2018</p>
             <h1 id="book-title">Van Kijken naar Zien</h1>
@@ -145,42 +120,51 @@
             <p id="book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur explicabo fugit necessitatibus dicta, quod hic minima vel tempore ab, reprehenderit beatae deleniti. Ullam repellendus, nulla nihil accusantium eius harum!</p>
          </div>
          <div id="book-photo">
-            <img id="book-cover" src="images/bookcover.png" alt="Van-kijken-naar-zien cover picture">
-            <button id="book-buy">Dit wil ik!</button>
+            <img id="book-cover" class="shadow-pop-br" src="images/bookcover.png" alt="Van-kijken-naar-zien cover picture">
+            <button id="book-buy" class="button button--primary not-online-yet">Dit wil ik!</button>
          </div>
-        </div>
+        </section>
 
 
-        <div class="photo-services section light-background" id="photo-services">
+        <section class="photo-services section light-background scroll-snap" id="photo-services">
             <div class="photo-services-container" id="order-photos">
+                <img class="photo-services-container-photo" src="images/camera.png" alt="">
                 <h1 class="photo-services-container-header">Bestel foto's</h1>
-                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
                 <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore a consectetur, ab et cumque, nemo veritatis culpa enim aliquam vel quia eos blanditiis placeat optio consequuntur dignissimos non? Repudiandae, nihil.</p>
             </div>
 
-            <div class="photo-services-container" id="workshop">
+            <div class="photo-services-container" id="order-photos">
+                <img class="photo-services-container-photo" src="images/blackboard.png" alt="">
                 <h1 class="photo-services-container-header">Workshops</h1>
-                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
-                <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima velit rerum ad eligendi tenetur sed debitis nostrum, ipsam reiciendis. Ducimus inventore vero ex quam adipisci blanditiis, nesciunt vel perferendis laudantium!</p>
+                <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore a consectetur, ab et cumque, nemo veritatis culpa enim aliquam vel quia eos blanditiis placeat optio consequuntur dignissimos non? Repudiandae, nihil.</p>
             </div>
 
-            <div class="photo-services-container" id="photography">
+            <div class="photo-services-container" id="order-photos">
+                <img class="photo-services-container-photo" src="images/wedding-rings.png" alt="">
                 <h1 class="photo-services-container-header">Evenementen</h1>
-                <img class="photo-services-container-photo" src="images/Spring-1.JPG" alt="">
-                <p class="photo-services-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quae non ipsum optio illum! Possimus et magnam laborum provident officia minus id similique deserunt voluptas, expedita vel obcaecati tenetur totam!</p>
+                <p class="photo-services-container-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore a consectetur, ab et cumque, nemo veritatis culpa enim aliquam vel quia eos blanditiis placeat optio consequuntur dignissimos non? Repudiandae, nihil.</p>
             </div>
-        </div>
+        </section>
+    
+        <section class="contact scroll-snap" id="contact">
+            <div class="contact-header">   
+                <h1 class="contact-header-text">Kom in <span class="text-bold text-accent">contact</span></h1>
+                <img class="contact-header-img" src="images/Spring-1.JPG" alt="" >
+            </div>
 
-        <div class="section contact" id="contact">
-
-        </div>
-
-
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
+            <div class="contact-description">
+                <p class="contact-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quae non ipsum optio illum! Possimus et magnam laborum provident officia minus id similique deserunt voluptas, expedita vel obcaecati tenetur totam!</p>                
+                <a class="contact-description-button button button--primary" href="mailto:timkoldijk@me.com?subject=Hello%20Tim&body=I%20wanted%20to%20reach%20out.">Contacteer Tim</a>
+                <div class="contact-description-border"></div>
+                <p class="contact-description-text2 text-bold text-accent">VOLG KOLDIJKS KIJK OP SOCIAL MEDIA</p>
+                <div class="contact-description-socials">
+                    <img class="contact-description-socials instagram"  src="images/instagram.png" alt="instagram logo" >
+                    <img class="contact-description-socials facebook" src="images/facebook.png" alt="facebook logo" >
+                    <img class="contact-description-socials youtube" src="images/youtube.png" alt="youtube logo" > 
+                </div>
+            </div>
+        </section>
+    
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -200,8 +184,9 @@
         <div class="footer-column">
             <h4>Volg Ons</h4>
             <ul class="social-links">
-                <li><a href="/images/instagram">Instagram</a></li>
-                <li><a href="/images/facebook-app-symbol">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Youtube</a></li>
             </ul>
         </div>
     </div>
@@ -209,6 +194,10 @@
         <p>&copy; 2024 Koldijk's Kijkjes. Alle rechten voorbehouden.</p>
     </div>
 </footer>
+
+<script src="script.js"></script>
+</body>
+
 
 
 </html>

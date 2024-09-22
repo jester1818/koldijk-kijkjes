@@ -1,0 +1,70 @@
+[
+    {
+      "image": "images/Autumn-1.JPG",
+      "title": "Serene Autumn Forest",
+      "description": "A peaceful walk through the autumn forest reveals the vibrant colors of fall.",
+      "date": "19 September, 2024"
+    },
+    {
+      "image": "images/Autumn-2.JPG",
+      "title": "Golden Leaves",
+      "description": "Close-up shot of golden leaves capturing the essence of autumn.",
+      "date": "20 September, 2024"
+    },
+    {
+      "image": "images/Autumn-3.JPG",
+      "title": "Misty Morning",
+      "description": "The mist rolls over the hills in the early morning light.",
+      "date": "21 September, 2024"
+    },
+    {
+      "image": "images/Autumn-4.JPG",
+      "title": "Autumn Pathway",
+      "description": "A winding path covered in autumn leaves invites you to explore.",
+      "date": "23 September, 2024"
+    },
+    {
+      "image": "images/Spring-1.JPG",
+      "title": "Spring Revival",
+      "description": "The path showcasing light at the end of spring.",
+      "date": "24 September, 2024"
+    },
+    {
+      "image": "images/Spring-2.JPG",
+      "title": "Scottish Highlander",
+      "description": "A magnificant animal, crawling around the Mookerheide.",
+      "date": "25 September, 2024"
+    },
+    {
+      "image": "images/Spring-3.JPG",
+      "title": "Brown Squirrel",
+      "description": "On its way to get food from its mother.",
+      "date": "26 September, 2024"
+    },
+    {
+      "image": "images/Spring-4.JPG",
+      "title": "Morning Owl",
+      "description": "A baby owl flying out into nature for its first steps.",
+      "date": "28 September, 2024"
+    },
+    {
+      "image": "images/Winter-1.JPG",
+      "title": "Winter Sunrise",
+      "description": "Winter wonderland with a sunrise.",
+      "date": "29 September, 2024"
+    },
+    {
+      "image": "images/Winter-2.JPG",
+      "title": "Covered treetops",
+      "description": "Snow-covered tree tops showcasing winter in the forest.",
+      "date": "30 September, 2024"
+    },
+    {
+      "image": "images/Winter-3.JPG",
+      "title": "Winter Rest",
+      "description": "Resting highlander in the snow.",
+      "date": "01 October, 2024"
+    }
+
+  ]
+  
